@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.peternc.filmtracr.SwipeRevealLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:dragFromEdge="right">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        style="@style/Theme.FilmTracr.Swipe">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/button_delete"
+                style="@style/Theme.FilmTracr.Delete"/>
+
+            <ImageButton
+                android:id="@+id/edit_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/button_edit"
+                style="@style/Theme.FilmTracr.Edit"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout android:id="@+id/movie_title_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
+        style="@style/Theme.FilmTracr.Background">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            style="@style/Theme.FilmTracr.Text"/>
+
+    </FrameLayout>
+</com.peternc.filmtracr.SwipeRevealLayout>
